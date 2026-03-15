@@ -15,8 +15,8 @@ export default function ProjectPage({ params }: Props) {
   if (!project) return notFound();
 
   return (
-    <main className="min-h-screen bg-[#071411] text-white pt-28">
-      <section className="max-w-7xl mx-auto px-6 py-16">
+    <main className="min-h-screen bg-[#071411] pt-28 text-white">
+      <section className="mx-auto max-w-7xl px-6 py-16">
         <Link
           href="/#proyectos"
           className="inline-flex items-center rounded-full border border-[#d9b15f]/40 px-5 py-2 text-[#d9b15f] transition hover:bg-[#d9b15f] hover:text-[#071411]"
@@ -54,12 +54,16 @@ export default function ProjectPage({ params }: Props) {
         <div className="mt-12 grid gap-8 md:grid-cols-2">
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
             <h2 className="mb-4 text-2xl font-bold">Objetivo</h2>
-            <p className="leading-8 text-white/75">{project.objective}</p>
+            <p className="leading-8 text-white/75">
+              {project.objective}
+            </p>
           </div>
 
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
             <h2 className="mb-4 text-2xl font-bold">Enfoque</h2>
-            <p className="leading-8 text-white/75">{project.focus}</p>
+            <p className="leading-8 text-white/75">
+              {project.focus}
+            </p>
           </div>
         </div>
       </section>

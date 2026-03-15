@@ -1,10 +1,11 @@
-import { Analytics } from "@vercel/analytics/react"
-import { ReactNode } from "react"
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { ReactNode } from "react";
 
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode
+  children: ReactNode;
 }) {
   return (
     <html lang="es">
@@ -13,5 +14,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
