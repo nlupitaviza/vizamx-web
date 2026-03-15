@@ -1,19 +1,17 @@
-import "./globals.css";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "VIZAMX",
-  description: "Marca estratégica",
-};
+import { Analytics } from "@vercel/analytics/react"
+import { ReactNode } from "react"
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode
 }) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+    <html lang="es">
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
-  );
+  )
 }
